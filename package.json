@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --poll 500",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --poll 500 --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -18,7 +18,10 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@ngrx/store": "^14.0.0-rc.0",
+    "@ngrx/store-devtools": "^14.0.0-rc.0",
     "rxjs": "~7.5.0",
+    "todomvc-app-css": "^2.4.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

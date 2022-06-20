@@ -1,0 +1,15 @@
+<!-- This footer should hidden by default and shown when there are todos -->
+<footer class="footer">
+    <!-- This should be `0 items left` by default -->
+    <span class="todo-count"><strong>{{countPendientes}}</strong> tareas pendientes</span>
+    <!-- Remove this if you don't implement routing -->
+    <ul class="filters">
+    
+      <li *ngFor="let type of filters" (click)="cambiarFiltro(type)">
+        <a  href="#/"
+            [class.selected]="type.toUpperCase() === filtroActual.toUpperCase()">{{ type | titlecase }}</a>
+      </li>
+    </ul>
+    <!-- Hidden if no completed items are left ↓ -->
+    <button class="clear-completed" (click)="borrarCompletados()">Limpiar completados</button>
+  </footer>
